@@ -166,9 +166,9 @@ if __name__ == '__main__':
     with open(os.path.join(rvc_models_dir, 'public_models.json'), encoding='utf8') as infile:
         public_models = json.load(infile)
 
-    with gr.Blocks(title='AICoverGenWebUI') as app:
+    with gr.Blocks(theme='Hev832/soft', title='AICoverGenWebUI') as app:
 
-        gr.markdown('Bfx RVC WebUI created with ❤️')
+        gr.Markdown('Bfx RVC WebUI created with ❤️')
 
         # main tab
         with gr.Tab("Generate"):
