@@ -1,11 +1,11 @@
 from pathlib import Path
 import requests
 
-MDX_DOWNLOAD_LINK = 'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/'
+#MDX_DOWNLOAD_LINK = 'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/'
 RVC_DOWNLOAD_LINK = 'https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/'
 
 
-fcpe = 'https://huggingface.co/IAHispano/Applio/tree/main/Resources'
+RVC_DOWNLOAD_LINK = 'https://huggingface.co/IAHispano/Applio/tree/main/Resources'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 mdxnet_models_dir = BASE_DIR / 'mdxnet_models'
@@ -29,6 +29,6 @@ if __name__ == '__main__':
     rvc_model_names = ['hubert_base.pt', 'rmvpe.pt', 'fcpe.pt']
     for model in rvc_model_names:
         print(f'Downloading {model}...')
-        dl_model(fcpe, RVC_DOWNLOAD_LINK, model, rvc_models_dir)
+        dl_model(fcpe, model, rvc_models_dir)
 
     print('All models downloaded!')
